@@ -106,11 +106,14 @@ function! s:WriteOutputToSplit(inputString)
     
     " If the buffer already exists then we presume it is by an earlier call of this script and reuses it
     if (bufexists(s:cwbOutputBuffer) == 0)
-        exec 'split! '.s:cwbOutputBuffer 
+        exec 'vsplit! '.s:cwbOutputBuffer 
     else
         exec 'silent! bwipeout! '.s:cwbOutputBuffer 
-        exec 'split! '.s:cwbOutputBuffer 
+        exec 'vsplit! '.s:cwbOutputBuffer 
     endif
 
     call append(0, split(a:inputString, '\r\n'))
+
+    " Hack, to make the keep focus in original window
+    exec 'wincmd w'
 endfunction
