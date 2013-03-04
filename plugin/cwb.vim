@@ -1,12 +1,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CWB.vim - Interacting with The Edinburgh Concurrency Workbench from within vim
-" Version: 0.1
 " Author: Søren Kejser Jensen <harmster.skj@gmail.com>
 " Maintainer: Søren Kejser Jensen <harmster.skj@gmail.com>
 " URL: kejserjensen.dk 
 " Licence: This script is released under the Vim License.
 " Acknowledgement: The layout used for this file was original from the AutoClose.vim plug-in
-" Last modified: 03/03/2013
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Prevents cwb.vim from being loaded more then once in the same Vim instance
 if exists("loaded_cwb")
@@ -64,8 +62,6 @@ endfunction
 
 " Opens CWB, load's the currently opened file, runs the input from user as a command, and quits CWB
 function! s:OpenAndRunCommandInCWB()
-
-    call s:CheckConfiguration()
 
     " Use of inputsave() and inputrestore() prevents input() from consuming mapping as input
     call inputsave()
