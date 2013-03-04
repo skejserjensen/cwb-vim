@@ -24,6 +24,18 @@ let g:ExpectPath = system("which expect")
 "Name of buffer used for the output from cwb, the plug-in will clean and use the buffer if it allready exists
 g:CWBOutputBuffer = "__cwb_output__"
 ```
-    
+
+##Documentation   
+The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide.
+
+```
+"Loads the file in the buffer into cwb and appends the ouput to a right vsplit
+OpenInCWB
+
+"Loads the file in the buffer into cwb, and executes an arbitrary command provided by the user 
+OpenAndRunCommandInCWB
+
+```
+ 
 ##License
 The plug-in is licensed under the Vim License, a full version of this license should have been bundled with your Vim installation and can be accessed using the :help license command, it can also be found here [vim License](http://vimdoc.sourceforge.net/htmldoc/uganda.html).
