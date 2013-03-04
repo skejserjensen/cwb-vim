@@ -63,6 +63,8 @@ endfunction
 " Opens CWB, load's the currently opened file, runs the input from user as a command, and quits CWB
 function! s:OpenAndRunCommandInCWB()
 
+    call s:CheckConfiguration()
+
     " Use of inputsave() and inputrestore() prevents input() from consuming mapping as input
     call inputsave()
     let s:command = input("Command: ")
