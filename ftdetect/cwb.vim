@@ -8,5 +8,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Sets the filetype of .cwb file to cwb so syntax is loaded correctly
-autocmd BufRead,BufNewFile *.cwb set filetype=cwb"
+autocmd BufRead,BufNewFile *.cwb set filetype=cwb
 

@@ -14,11 +14,21 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keywords 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syn keyword Keywords agent branchingeq ccs checkprop checkpropold clear closure cong contraction cwb deadlocks deadlocksobs derivatives dfstrong dftrace dfweak diveq diverges echo eq findinit findinitobs freevars game globalmc graph help init input localmc logic mayeq maypre min musteq mustpre normalform obs output pb pre precong prefixform print prop quit random relabel save set sim size sort stable states statesexp statesobs strongeq strongpre testeq testpre toggle transitions twothirdseq twothirdspre vs  
+syn keyword Keywords 0 tau
+
+syn keyword Functions agent branchingeq ccs checkprop checkpropold clear closure cong contraction cwb deadlocks deadlocksobs derivatives dfstrong dftrace dfweak diveq diverges echo eq findinit findinitobs freevars game globalmc graph help init input localmc logic mayeq maypre min musteq mustpre normalform obs output pb pre precong prefixform print prop quit random relabel save set sim size sort stable states statesexp statesobs strongeq strongpre testeq testpre toggle transitions twothirdseq twothirdspre vs  
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Matchs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syn match Comment "*.*$"
+
+"Ensures thats ticks and are only highlighted if used to indicate coname
+syn match Operators "'\ze\w"
+
+"Arangment of these should be kept, as the escapes in BO are requiered but overwrites \ in operators
+syn match BlockOperators "[ \[\] () {} ]"
+syn match Operators "[. + | = \ @ $ :]"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Regions
@@ -28,6 +38,10 @@ syn keyword Keywords agent branchingeq ccs checkprop checkpropold clear closure 
 " Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight link Keywords Keyword
+highlight link Functions Function 
+highlight link Comment Comment 
+highlight link Operators Operator 
+highlight link BlockOperators Constant 
 
 let b:current_syntax = "cwb"
 
