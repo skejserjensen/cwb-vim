@@ -26,7 +26,7 @@ g:CWBOutputBuffer = "__cwb_output__"
 ```
 
 ##Documentation   
-The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide.
+The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide. Cwb.vim also provides syntax highlighting for data files with the .cwb extension.
 
 ```
 "Loads the file in the buffer into cwb and appends the ouput to a right vsplit
