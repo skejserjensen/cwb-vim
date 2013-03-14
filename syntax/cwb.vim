@@ -21,6 +21,11 @@ syn keyword Functions agent branchingeq ccs checkprop checkpropold clear closure
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Matchs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Multiple matches is needed as a line as valid line can have whitespace or a comment after semicolon
+syn match SyntaxError "[^;]\s*$"
+syn match SyntaxError "[^;]\s*[\*]"
+
+"Comments are hightlighted after syntax errors as it hides errors in lines consiting only of comemnts
 syn match Comment "*.*$"
 
 "Ensures thats ticks and are only highlighted if used to indicate coname
@@ -39,6 +44,7 @@ syn match Operators "[. + | = \ @ $ :]"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight link Keywords Keyword
 highlight link Functions Function 
+highlight link SyntaxError Error 
 highlight link Comment Comment 
 highlight link Operators Operator 
 highlight link BlockOperators Constant 
