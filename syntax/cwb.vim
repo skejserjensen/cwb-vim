@@ -35,6 +35,10 @@ syn match Operators "'\ze\w"
 syn match BlockOperators "[ \[\] () {} ]"
 syn match Operators "[. + | = \ @ $ :]"
 
+"HACK: added to ensure that a missing semicolon is highligted with Syntax Error
+" and not overwritten by BlockOperators if last char is a ending brace
+syn match SyntaxError ")[^;]*$"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Regions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
