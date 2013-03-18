@@ -16,7 +16,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syn keyword Keywords 0 tau
 
-syn keyword Functions agent branchingeq ccs checkprop checkpropold clear closure cong contraction cwb deadlocks deadlocksobs derivatives dfstrong dftrace dfweak diveq diverges echo eq findinit findinitobs freevars game globalmc graph help init input localmc logic mayeq maypre min musteq mustpre normalform obs output pb pre precong prefixform print prop quit random relabel save set sim size sort stable states statesexp statesobs strongeq strongpre testeq testpre toggle transitions twothirdseq twothirdspre vs  
+syn keyword Functions agent branchingeq ccs checkprop checkpropold clear closure cong contraction cwb deadlocks deadlocksobs derivatives dfstrong dftrace dfweak diveq diverges echo eq findinit findinitobs freevars game globalmc graph help init input localmc logic mayeq maypre min max musteq mustpre normalform obs output pb pre precong prefixform print prop quit random relabel save set sim size sort stable states statesexp statesobs strongeq strongpre testeq testpre toggle transitions twothirdseq twothirdspre vs  
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Matchs
@@ -25,19 +25,21 @@ syn keyword Functions agent branchingeq ccs checkprop checkpropold clear closure
 syn match SyntaxError "[^;]\s*$"
 syn match SyntaxError "[^;]\s*[\*]"
 
-"Comments are hightlighted after syntax errors as it hides errors in lines consiting only of comemnts
+"Comments are highlighted after syntax errors as it hides errors in lines consisting only of comments
 syn match Comment "*.*$"
 
 "Ensures thats ticks and are only highlighted if used to indicate coname
 syn match Operators "'\ze\w"
 
-"Arangment of these should be kept, as the escapes in BO are requiered but overwrites \ in operators
+"Arangment of these should be kept, as the escapes in BO are required but overwrites \ in operators
 syn match BlockOperators "[ \[\] () {} ]"
 syn match Operators "[. + | = \ @ $ :]"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Regions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"String are highlighted last to override highlighting all keywords inside strings
+syn region Strings start=/"/ end=/"/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
@@ -48,6 +50,7 @@ highlight link SyntaxError Error
 highlight link Comment Comment 
 highlight link Operators Operator 
 highlight link BlockOperators Constant 
+highlight link Strings String 
 
 let b:current_syntax = "cwb"
 
