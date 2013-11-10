@@ -1,0 +1,82 @@
+*cwb.txt*
+
+==============================================================================
+cwb.vim                                                 *cwb*
+
+1. Introduction                                         |cwb-intro|
+1. Setup                                                |cwb-setup|
+3. Usage                                                |cwb-usage|
+4. Options                                              |cwb-options|
+5. About                                                |cwb-about|
+6. License                                              |cwb-license|
+
+==============================================================================
+1. Introduction	                                        *cwb-intro*
+
+cwb.vim is very small plug-in for opening files and running commands in the
+Edinburgh Concurrency Workbench through Vim, as editing inside the program is
+so unpleasant that the bundled Emacs interactive mode is the official
+recommended way to use the program.
+
+==============================================================================
+2. Setup                                                *cwb-setup*
+
+Before installing the plug-in, should both the Edinburgh Concurrency
+Workbench, and the program Expect be installed, as the plug-in depends upon
+them.
+
+Installing cwb.vim can be done either manually by copying the files and
+folders into your .vim folder, or using a plug-in manager such as Pathogen
+or Vundle.
+
+After installation is it necessary to set the path to the workbench 
+executable, by adding the below to your .vimrc.
+
+    let g:CWBPath = "/path/to/cwb/"
+
+Expect should be detected by Which, but must otherwise also be set manually.
+
+==============================================================================
+2. Usage                                                *cwb-usage*
+
+                                                        *:OpenInCWB*
+:OpenInCWB                  Loads the file in the buffer into cwb and displays
+                            the output in a right vsplit.
+
+                                                        *:OpenAndRunCommandInCWB*
+:OpenAndRunCommandInCWB     Loads the file in the buffer into cwb, and 
+                            executes an arbitrary command provided by the
+                            user.
+
+==============================================================================
+3. Options                                              *cwb-options*
+
+g:CWBPath                   Path to cwb on your system, must be set for the 
+                            plug-in to work.
+
+g:ExpectPath                Path to Expect on your system, it is only 
+                            necessary to set this if your system does not have
+                            Which installed, or if expect is not included in
+                            path.
+
+g:CWBOutputBuffer           Name of buffer used for the output from cwb, 
+                            the plug-in will clean and use the buffer if it
+                            already exists
+
+==============================================================================
+4. About                                                *cwb-about*
+
+The main author of cwb.vim are: 
+    Søren Kejser Jensen <harmster.skj@gmail.com>
+
+With contributions from:
+    Christoffer Moesgaard <cmoesgaard@gmail.com>
+
+==============================================================================
+5. License                                               *cwb-license*
+
+This plug-in is licensed under the terms of the Vim License.
+The license should be bundled with your distribution of Vim.
+
+==============================================================================
+vim:tw=78:sw=4:ft=help:norl:

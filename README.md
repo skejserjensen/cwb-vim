@@ -1,8 +1,8 @@
 # cwb.vim 
-cwb.vim is very small plug-in for opening files and running commands in the Edinburgh Concurrency Workbench through Vim, as editing inside the program is so unpleasant that the bundled emacs interactive mode is the official recommended way to use the program.
+cwb.vim is very small plug-in for opening files and running commands in the Edinburgh Concurrency Workbench through Vim, as editing inside the program is so unpleasant that the bundled Emacs interactive mode is the official recommended way to use the program.
 
 ## Dependencies
-The only dependence for the plug-in despite Vim and CWB itself of course, is the Expect program used for communicating with CWB as it does not except input directly from the command line.
+The only dependence for the plug-in not including Vim and CWB itself, is the Expect program used for communicating with CWB, as CWB does not accept input directly from the command line.
 
 ## Installation
 1. Installation
@@ -11,17 +11,17 @@ Either copy cwb.vim to your .vim/plugins directory, or install it using a plug-i
 
 
 2. Configuration
-After the installation is completed is it necessary to set a couple of variables in your .vimrc, although only the full path to CWB as strictly necessary, the values shown being assigned to the variables are the plug-ins default values.
+After the installation is completed, should a couple of variables be added to your .vimrc, although only the full path to CWB is strictly necessary, the values shown being assigned to the variables are the plug-ins default values.
 
 
 ```
-"Path to cwb on your system, must be set for the plug-in to work.
+"Path to CWB on your system, must be set for the plug-in to work.
 let g:CWBPath = ""
 
-"Path to expect on your system, it is only necessary to set this if your system do not have which installed
+"Path to expect on your system, it is only necessary to set this if your system do not have Which installed.
 let g:ExpectPath = system("which expect")
 
-"Name of buffer used for the output from cwb, the plug-in will clean and use the buffer if it allready exists
+"Name of buffer used for the output from CWB, the plug-in will clean and use the buffer if it allready exists.
 g:CWBOutputBuffer = "__cwb_output__"
 ```
 
@@ -29,10 +29,10 @@ g:CWBOutputBuffer = "__cwb_output__"
 The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide. Cwb.vim also provides syntax highlighting for data files with the .cwb extension.
 
 ```
-"Loads the file in the buffer into cwb and appends the ouput to a right vsplit
+"Loads the file in the buffer into CWB and appends the ouput to a right vsplit
 OpenInCWB
 
-"Loads the file in the buffer into cwb, and executes an arbitrary command provided by the user 
+"Loads the file in the buffer into CWB, and executes an arbitrary command provided by the user 
 OpenAndRunCommandInCWB
 
 ```

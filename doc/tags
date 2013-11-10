@@ -1,0 +1,10 @@
+:OpenAndRunCommandInCWB	cwb.txt	/*:OpenAndRunCommandInCWB*
+:OpenInCWB	cwb.txt	/*:OpenInCWB*
+cwb	cwb.txt	/*cwb*
+cwb-about	cwb.txt	/*cwb-about*
+cwb-intro	cwb.txt	/*cwb-intro*
+cwb-license	cwb.txt	/*cwb-license*
+cwb-options	cwb.txt	/*cwb-options*
+cwb-setup	cwb.txt	/*cwb-setup*
+cwb-usage	cwb.txt	/*cwb-usage*
+cwb.txt	cwb.txt	/*cwb.txt*
