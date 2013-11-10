@@ -18,10 +18,10 @@ After the installation is completed, should a couple of variables be added to yo
 "Path to CWB on your system, must be set for the plug-in to work.
 let g:CWBPath = ""
 
-"Path to expect on your system, it is only necessary to set this if your system do not have Which installed.
+"Path to Expect on your system, must be set if Which or Expect is not part of path on your system.
 let g:ExpectPath = system("which expect")
 
-"Name of buffer used for the output from CWB, the plug-in will clean and use the buffer if it allready exists.
+"The buffer used for the output from CWB, the plug-in will reuse the buffer if it allready exists.
 g:CWBOutputBuffer = "__cwb_output__"
 ```
 
