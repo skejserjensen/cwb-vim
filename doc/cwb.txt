@@ -67,7 +67,7 @@ g:CWBOutputBuffer           Name of buffer used for the output from cwb,
 4. About                                                *cwb-about*
 
 The main author of cwb.vim are: 
-    Søren Kejser Jensen <harmster.skj@gmail.com>
+    Søren Kejser Jensen <devel@kejserjensen.dk>
 
 With contributions from:
     Christoffer Moesgaard <cmoesgaard@gmail.com>

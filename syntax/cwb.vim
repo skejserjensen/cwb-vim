@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim syntax file for The Edinburgh Concurrency Workbench
-" Author: Søren Kejser Jensen <harmster.skj@gmail.com>
-" Maintainer: Søren Kejser Jensen <harmster.skj@gmail.com>
+" Author: Søren Kejser Jensen <devel@kejserjensen.dk>
+" Maintainer: Søren Kejser Jensen <devel@kejserjensen.dk>
 " URL: kejserjensen.dk 
 " Licence: This script is released under the Vim License.
 " Acknowledgement: The layout used for this file was original from the AutoClose.vim plug-in
