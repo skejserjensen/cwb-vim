@@ -34,7 +34,7 @@ executable, by adding the below to your .vimrc.
 
     let g:CWBPath = "/path/to/cwb/"
 
-Expect should be detected by Which, but must otherwise also be set manually.
+Expect should be detected by which, but must otherwise also be set manually.
 
 ==============================================================================
 2. Usage                                                *cwb-usage*
@@ -56,8 +56,16 @@ g:CWBPath                   Path to cwb on your system, must be set for the
 
 g:ExpectPath                Path to Expect on your system, it is only 
                             necessary to set this if your system does not have
-                            Which installed, or if expect is not included in
+                            which installed, or if expect is not included in
                             path.
+
+g:TerminalCommand           Command to launch a terminal emulator on your
+                            system with the flag necessary to run a command as
+                            a parameter, properly -e or -x. It is necessary to
+                            set this if your system does not have which
+                            installed, you are not using one of the five
+                            terminal emulator the plug-in knows about, or if
+                            it is not included in the system path.
 
 g:CWBOutputBuffer           Name of buffer used for the output from cwb, 
                             the plug-in will clean and use the buffer if it

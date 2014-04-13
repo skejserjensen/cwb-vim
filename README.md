@@ -21,8 +21,13 @@ let g:CWBPath = ""
 "Path to Expect on your system, must be set if Which or Expect is not part of path on your system.
 let g:ExpectPath = system("which expect")
 
+"The command needed to start a terminal emulator and run its first parameter as a command with all
+" subsequent paramters passed to this command, for most terminal emulators is it the -e or -x flag.
+let g:TerminalCommand = system("which [urxvt, xterm, gnome-terminal, xfce4-terminal, konsole]")
+
 "The buffer used for the output from CWB, the plug-in will reuse the buffer if it allready exists.
-g:CWBOutputBuffer = "__cwb_output__"
+let g:CWBOutputBuffer = "__cwb_output__"
+
 ```
 
 ##Documentation   
@@ -36,6 +41,7 @@ OpenInCWB
 OpenAndRunCommandInCWB
 
 ```
+As a special case will calling the command SIM through OpenAndRunCommandInCWB in cwb-vim launch a terminal instead of creating a right split. This is necessary as the command sets CWB in a special interactive simulation mode, and communication interactively with CWB through Expect and updating the right split in Vim at the same time is still an unsolved problem.
  
 ##License
 The plug-in is licensed under the Vim License, a full version of this license should have been bundled with your Vim installation and can be accessed using the :help license command, it can also be found here [vim License](http://vimdoc.sourceforge.net/htmldoc/uganda.html).
