@@ -1,5 +1,5 @@
-# cwb.vim 
-cwb.vim is very small plug-in for opening files and running commands in the Edinburgh Concurrency Workbench through Vim, as editing inside the program is so unpleasant that the bundled Emacs interactive mode is the official recommended way to use the program.
+# cwb.vim
+cwb.vim is a very small plug-in for opening files and running commands in the Edinburgh Concurrency Workbench through Vim, as editing inside the program is so unpleasant that the bundled Emacs interactive mode is the official recommended way to use the program.
 
 ## Dependencies
 The only dependence for the plug-in not including Vim and CWB itself, is the Expect program used for communicating with CWB, as CWB does not accept input directly from the command line.
@@ -30,18 +30,18 @@ let g:CWBOutputBuffer = "__cwb_output__"
 
 ```
 
-##Documentation   
+##Documentation
 The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide. Cwb.vim also provides syntax highlighting for data files with the .cwb extension.
 
 ```
 "Loads the file in the buffer into CWB and appends the ouput to a right vsplit
 OpenInCWB
 
-"Loads the file in the buffer into CWB, and executes an arbitrary command provided by the user 
+"Loads the file in the buffer into CWB, and executes an arbitrary command provided by the user
 OpenAndRunCommandInCWB
 
 ```
 As a special case will calling the command SIM through OpenAndRunCommandInCWB in cwb-vim launch a terminal instead of creating a right split. This is necessary as the command sets CWB in a special interactive simulation mode, and communication interactively with CWB through Expect and updating the right split in Vim at the same time is still an unsolved problem.
- 
+
 ##License
 The plug-in is licensed under the Vim License, a full version of this license should have been bundled with your Vim installation and can be accessed using the :help license command, it can also be found here [vim License](http://vimdoc.sourceforge.net/htmldoc/uganda.html).
