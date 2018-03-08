@@ -30,7 +30,7 @@ let g:CWBOutputBuffer = "__cwb_output__"
 
 ```
 
-##Documentation
+## Documentation
 The following is a listing of the commands made available by the plug-in and a short description of the functionality they provide. Cwb.vim also provides syntax highlighting for data files with the .cwb extension.
 
 ```
@@ -43,5 +43,5 @@ OpenAndRunCommandInCWB
 ```
 As a special case will calling the command SIM through OpenAndRunCommandInCWB in cwb-vim launch a terminal instead of creating a right split. This is necessary as the command sets CWB in a special interactive simulation mode, and communication interactively with CWB through Expect and updating the right split in Vim at the same time is still an unsolved problem.
 
-##License
+## License
 The plug-in is licensed under the Vim License, a full version of this license should have been bundled with your Vim installation and can be accessed using the :help license command, it can also be found here [vim License](http://vimdoc.sourceforge.net/htmldoc/uganda.html).
